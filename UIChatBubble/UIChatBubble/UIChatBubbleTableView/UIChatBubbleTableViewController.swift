@@ -8,16 +8,32 @@
 
 import UIKit
 
-class UIChatBubbleTableViewController: UITableViewController, UITableViewDataSource
+class UIChatBubbleTableViewController: UITableViewController, UITableViewDataSource, UITextFieldDelegate
 {
     var cellDataArray = [ChatBubbleCellData]()
     var ifCellRegistered = false
+    @IBOutlet weak var senderTextField: UITextField!
     
     // Load test data here
     override func viewDidLoad()
     {
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         loadTestData()
+        senderTextField.delegate = self
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        senderTextField.becomeFirstResponder()
+    }
+    
+    //Send button on keyboard action
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        senderTextField.resignFirstResponder()
+        addMessage(senderTextField.text, date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleMessageType.MyMessage)
+        tableView.reloadData()
+        senderTextField.text = ""
+        return true
     }
     
     // Number of rows in TableView
