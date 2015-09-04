@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19A300C0D4398BAC84AA78ED /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B678F0DB0F3210C3C475A75B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6C9A3E0B1B490709005DC10B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9A3E0A1B490709005DC10B /* AppDelegate.swift */; };
 		6C9A3E101B490709005DC10B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C9A3E0E1B490709005DC10B /* Main.storyboard */; };
 		6C9A3E121B490709005DC10B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C9A3E111B490709005DC10B /* Images.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3626C7E837ED358BAE80A745 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6C9A3E051B490709005DC10B /* UIChatBubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIChatBubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C9A3E091B490709005DC10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C9A3E0A1B490709005DC10B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		6C9A3E561B490840005DC10B /* UIChatBubbleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIChatBubbleTableViewController.swift; sourceTree = "<group>"; };
 		6C9A3E5A1B4908CA005DC10B /* UIChatBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIChatBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		6C9A3E5B1B4908CA005DC10B /* UIChatBubbleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIChatBubbleTableViewCell.xib; sourceTree = "<group>"; };
+		7093626EFDEE2568B20247D3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B678F0DB0F3210C3C475A75B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A300C0D4398BAC84AA78ED /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +69,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3337DCED14D7A4C02B287360 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B678F0DB0F3210C3C475A75B /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6C9A3DFC1B490709005DC10B = {
 			isa = PBXGroup;
 			children = (
 				6C9A3E071B490709005DC10B /* UIChatBubble */,
 				6C9A3E1D1B490709005DC10B /* UIChatBubbleTests */,
 				6C9A3E061B490709005DC10B /* Products */,
+				AEEB628F718E53727577EAB2 /* Pods */,
+				3337DCED14D7A4C02B287360 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +147,15 @@
 			path = UIChatBubbleTableView;
 			sourceTree = "<group>";
 		};
+		AEEB628F718E53727577EAB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3626C7E837ED358BAE80A745 /* Pods.debug.xcconfig */,
+				7093626EFDEE2568B20247D3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C9A3E241B490709005DC10B /* Build configuration list for PBXNativeTarget "UIChatBubble" */;
 			buildPhases = (
+				3E70FF785DBD3D5C4E396451 /* Check Pods Manifest.lock */,
 				6C9A3E011B490709005DC10B /* Sources */,
 				6C9A3E021B490709005DC10B /* Frameworks */,
 				6C9A3E031B490709005DC10B /* Resources */,
+				BF71C5DE4171881BBBEAB999 /* Embed Pods Frameworks */,
+				15C7C3577EA7E5DB14B4D4AD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +255,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15C7C3577EA7E5DB14B4D4AD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E70FF785DBD3D5C4E396451 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF71C5DE4171881BBBEAB999 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C9A3E011B490709005DC10B /* Sources */ = {
@@ -365,6 +440,7 @@
 		};
 		6C9A3E251B490709005DC10B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3626C7E837ED358BAE80A745 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIChatBubble/Info.plist;
@@ -375,6 +451,7 @@
 		};
 		6C9A3E261B490709005DC10B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7093626EFDEE2568B20247D3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIChatBubble/Info.plist;
