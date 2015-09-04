@@ -12,3 +12,8 @@
 - For now, you can make talk the app with mac demo of [bonjour-demo-osx-to-ios](https://github.com/jameszaghini/bonjour-demo-osx-to-ios)
 - When you open both app, select the iPhone from the list in mac simulator.
 - Start the talk each other. 
+
+## Version
+
+- Xcode 6.4
+- Swift 1.2
