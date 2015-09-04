@@ -13,6 +13,10 @@
 - When you open both app, select the iPhone from the list in mac simulator.
 - Start the talk each other. 
 
+## Future Works
+
+- Compatible with Android and iPhone (iPhone to iPhone is not tested.)
+
 ## Version
 
 - Xcode 6.4
